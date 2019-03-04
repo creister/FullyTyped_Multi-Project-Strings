@@ -13,13 +13,14 @@ private let name = "FullyTyped"
 class ViewController: UITableViewController {
   
   private let strings: [String] = [
-    NSLocalizedString("hello_world", comment: ""),
-    String(format: NSLocalizedString("greet_user", comment: ""), name),
-    String(format: NSLocalizedString("count_of_strings", comment: ""), 2)
+    R.string.localizable.hello_world(),
+    R.string.localizable.greet_user(name),
+    R.string.localizable.count_of_strings(2)
   ]
   
   override func viewDidLoad() {
     super.viewDidLoad()
+
     
     tableView.registerNibForCellReuse(TextTableViewCell.self)
   }

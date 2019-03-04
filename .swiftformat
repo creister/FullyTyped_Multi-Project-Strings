@@ -1,0 +1,9 @@
+# file options
+
+--exclude Pods,generated,tools,fastlane
+
+# format options
+
+--indent 2
+--stripunusedargs closure-only
+--patternlet inline

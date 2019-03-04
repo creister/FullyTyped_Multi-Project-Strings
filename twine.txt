@@ -1,0 +1,16 @@
+[[Example]]
+	[count_of_strings]
+		en = There are %d strings above this one
+		comment = Example of integer substitution
+		es = hay %d cuerdas encima de esta
+		fr = il y a %d chaînes au dessus de celui-ci
+	[hello_world]
+		en = Hello, World!
+		comment = a classic
+		es = ¡Hola Mundo!
+		fr = Bonjour le monde!
+	[greet_user]
+		en = Hello %@!
+		comment = Greet the user by name
+		es = Hola %@
+		fr = Bonjour %@!

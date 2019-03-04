@@ -18,6 +18,7 @@
 		3B9C68D1222CB1C5001B165E /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C68D0222CB1C5001B165E /* TextTableViewCell.swift */; };
 		3B9C68D3222CB24A001B165E /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C68D2222CB24A001B165E /* UITableView+Extensions.swift */; };
 		3BD77475222CC75B004F5297 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BD77473222CC75B004F5297 /* Localizable.strings */; };
+		3BD7747D222CD79F004F5297 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7747C222CD79F004F5297 /* R.generated.swift */; };
 		BB2F870D8FBDC90830F20769 /* Pods_MultiProjectStringsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 435976EF319AA78C939FCA10 /* Pods_MultiProjectStringsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		3BD77474222CC75B004F5297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3BD77477222CC901004F5297 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3BD77478222CC907004F5297 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3BD7747C222CD79F004F5297 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		435976EF319AA78C939FCA10 /* Pods_MultiProjectStringsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultiProjectStringsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6338CD5294F0897B72FF389 /* Pods-MultiProjectStrings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiProjectStrings.debug.xcconfig"; path = "Target Support Files/Pods-MultiProjectStrings/Pods-MultiProjectStrings.debug.xcconfig"; sourceTree = "<group>"; };
 		A73B0EBB9CC781CA922FE755 /* Pods-MultiProjectStringsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiProjectStringsTests.release.xcconfig"; path = "Target Support Files/Pods-MultiProjectStringsTests/Pods-MultiProjectStringsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		3B9C68A3222CAFDB001B165E /* MultiProjectStrings */ = {
 			isa = PBXGroup;
 			children = (
+				3BD7747B222CD79F004F5297 /* generated */,
 				3B9C68A4222CAFDB001B165E /* AppDelegate.swift */,
 				3BD77473222CC75B004F5297 /* Localizable.strings */,
 				3B9C68A6222CAFDB001B165E /* ViewController.swift */,
@@ -122,6 +125,14 @@
 			path = MultiProjectStringsTests;
 			sourceTree = "<group>";
 		};
+		3BD7747B222CD79F004F5297 /* generated */ = {
+			isa = PBXGroup;
+			children = (
+				3BD7747C222CD79F004F5297 /* R.generated.swift */,
+			);
+			path = generated;
+			sourceTree = "<group>";
+		};
 		E15A5403E36F45D6AF421B86 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,7 +141,6 @@
 				35D9CAB588BD175D0D0A064F /* Pods-MultiProjectStringsTests.debug.xcconfig */,
 				A73B0EBB9CC781CA922FE755 /* Pods-MultiProjectStringsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -152,6 +162,7 @@
 			buildPhases = (
 				493C605C79C8404FC1783B82 /* [CP] Check Pods Manifest.lock */,
 				3BD77479222CCDC7004F5297 /* Twine Run Script */,
+				3BD7747A222CD46F004F5297 /* R.swift Run Script */,
 				3B9C689D222CAFDB001B165E /* Sources */,
 				3B9C689E222CAFDB001B165E /* Frameworks */,
 				3B9C689F222CAFDB001B165E /* Resources */,
@@ -266,6 +277,26 @@
 			shellPath = /bin/sh;
 			shellScript = "twine generate-all-localization-files twine.txt $TARGET_NAME\n# workaround to generate Base.lproj Localizable.strings\ntwine generate-localization-file twine.txt \"$TARGET_NAME/Base.lproj/Localizable.strings\" --lang en\n";
 		};
+		3BD7747A222CD46F004F5297 /* R.swift Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "R.swift Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/$TARGET_NAME/generated/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/$TARGET_NAME/generated/R.generated.swift\"\n\n";
+		};
 		493C605C79C8404FC1783B82 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -341,6 +372,7 @@
 			files = (
 				3B9C68D1222CB1C5001B165E /* TextTableViewCell.swift in Sources */,
 				3B9C68A7222CAFDB001B165E /* ViewController.swift in Sources */,
+				3BD7747D222CD79F004F5297 /* R.generated.swift in Sources */,
 				3B9C68A5222CAFDB001B165E /* AppDelegate.swift in Sources */,
 				3B9C68D3222CB24A001B165E /* UITableView+Extensions.swift in Sources */,
 			);

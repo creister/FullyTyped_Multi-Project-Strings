@@ -117,6 +117,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B9C68BE222CAFDD001B165E /* Build configuration list for PBXNativeTarget "MultiProjectStrings" */;
 			buildPhases = (
+				3BD77479222CCDC7004F5297 /* Twine Run Script */,
 				3B9C689D222CAFDB001B165E /* Sources */,
 				3B9C689E222CAFDB001B165E /* Frameworks */,
 				3B9C689F222CAFDB001B165E /* Resources */,
@@ -209,6 +210,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3BD77479222CCDC7004F5297 /* Twine Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Twine Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "twine generate-all-localization-files twine.txt $TARGET_NAME\n# workaround to generate Base.lproj Localizable.strings\ntwine generate-localization-file twine.txt \"$TARGET_NAME/Base.lproj/Localizable.strings\" --lang en\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3B9C689D222CAFDB001B165E /* Sources */ = {

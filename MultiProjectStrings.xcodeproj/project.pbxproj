@@ -16,6 +16,7 @@
 		3B9C68CF222CB1B3001B165E /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9C68CE222CB1B3001B165E /* TextTableViewCell.xib */; };
 		3B9C68D1222CB1C5001B165E /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C68D0222CB1C5001B165E /* TextTableViewCell.swift */; };
 		3B9C68D3222CB24A001B165E /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9C68D2222CB24A001B165E /* UITableView+Extensions.swift */; };
+		3BD77475222CC75B004F5297 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BD77473222CC75B004F5297 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		3B9C68CE222CB1B3001B165E /* TextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
 		3B9C68D0222CB1C5001B165E /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		3B9C68D2222CB24A001B165E /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		3BD77474222CC75B004F5297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				3B9C68A4222CAFDB001B165E /* AppDelegate.swift */,
+				3BD77473222CC75B004F5297 /* Localizable.strings */,
 				3B9C68A6222CAFDB001B165E /* ViewController.swift */,
 				3B9C68D0222CB1C5001B165E /* TextTableViewCell.swift */,
 				3B9C68D2222CB24A001B165E /* UITableView+Extensions.swift */,
@@ -186,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD77475222CC75B004F5297 /* Localizable.strings in Resources */,
 				3B9C68AF222CAFDD001B165E /* LaunchScreen.storyboard in Resources */,
 				3B9C68AC222CAFDD001B165E /* Assets.xcassets in Resources */,
 				3B9C68CF222CB1B3001B165E /* TextTableViewCell.xib in Resources */,
@@ -247,6 +251,14 @@
 				3B9C68AE222CAFDD001B165E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3BD77473222CC75B004F5297 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BD77474222CC75B004F5297 /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

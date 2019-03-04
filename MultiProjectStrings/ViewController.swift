@@ -13,9 +13,9 @@ private let name = "FullyTyped"
 class ViewController: UITableViewController {
   
   private let strings: [String] = [
-    "Hello, World!",
-    "Hello, \(name)!",
-    "There are \(2) strings above this one."
+    NSLocalizedString("hello_world", comment: ""),
+    String(format: NSLocalizedString("greet_user", comment: ""), name),
+    String(format: NSLocalizedString("count_of_strings", comment: ""), 2)
   ]
   
   override func viewDidLoad() {
